@@ -1,24 +1,24 @@
 @font-face {
     font-family: "GT Walsheim";
-    src: url("./fonts/GT-Walsheim-Regular.otf") format("opentype");
+    src: url("/fonts/GT-Walsheim-Regular.otf") format("opentype");
     font-weight: 400;
 }
 
 @font-face {
     font-family: "GT Walsheim";
-    src: url("./fonts/GT-Walsheim-Bold.otf") format("opentype");
+    src: url("/fonts/GT-Walsheim-Bold.otf") format("opentype");
     font-weight: 800;
 }
 
 @font-face {
     font-family: "GT Walsheim";
-    src: url("./fonts/GT-Walsheim-Light.otf") format("opentype");
+    src: url("/fonts/GT-Walsheim-Light.otf") format("opentype");
     font-weight: 300;
 }
 
 @font-face {
     font-family: "GT Walsheim";
-    src: url("./fonts/GT-Walsheim-Medium.otf") format("opentype");
+    src: url("/fonts/GT-Walsheim-Medium.otf") format("opentype");
     font-weight: 700;
 }
 
@@ -104,7 +104,7 @@ ul {
 }
 
 .under-nav {
-    background-color: white;
+    background: linear-gradient(to right,rgba(55,99,172,.1) 0,rgba(248,176,72,.1) 100%);
     padding-bottom: 20px;
 }
 
@@ -239,10 +239,6 @@ ul.search-links {
 
 .panel-footer h1 {
     float: right;
-}
-
-.panel-footer h1:after {
-    content: " ➜";
 }
 
 .panel-footer h1 a {

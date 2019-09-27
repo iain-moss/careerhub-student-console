@@ -1,24 +1,24 @@
 @font-face {
     font-family: "GT Walsheim";
-    src: url("./fonts/GT-Walsheim-Regular.otf") format("opentype");
+    src: url("/fonts/GT-Walsheim-Regular.otf") format("opentype");
     font-weight: 400;
 }
 
 @font-face {
     font-family: "GT Walsheim";
-    src: url("./fonts/GT-Walsheim-Bold.otf") format("opentype");
+    src: url("/fonts/GT-Walsheim-Bold.otf") format("opentype");
     font-weight: 800;
 }
 
 @font-face {
     font-family: "GT Walsheim";
-    src: url("./fonts/GT-Walsheim-Light.otf") format("opentype");
+    src: url("/fonts/GT-Walsheim-Light.otf") format("opentype");
     font-weight: 300;
 }
 
 @font-face {
     font-family: "GT Walsheim";
-    src: url("./fonts/GT-Walsheim-Medium.otf") format("opentype");
+    src: url("/fonts/GT-Walsheim-Medium.otf") format("opentype");
     font-weight: 700;
 }
 
@@ -38,6 +38,7 @@ html {
     --pink: #E7589A;
     --header-height: 50px;
     --navbar-height: 40px;
+    --transition: all .3s linear;
 }
 
 body {
@@ -73,6 +74,30 @@ ul {
     width: 1170px;
 }
 
+.dropdown ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: max-content;
+    left: 0;
+    background-color: var(--mist);
+    padding: 0;
+    box-shadow: 0 1px 1px 1px rgba(179, 179, 179, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+    overflow: hidden;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.dropdown ul li {
+    float: none;
+    font-family: GT Walsheim;
+    color: var(--granite);
+    font-size: 14px;
+    font-weight: 400;
+}
+
 .navbar li {
     display: inline;
     position: relative;
@@ -83,18 +108,44 @@ ul {
     font-weight: 400;
 }
 
-.navbar li a {
+.navbar li a,
+.dropdown ul li a {
     padding: 0 15px;
     text-decoration: none;
     color: inherit;
     display: block;
     align-items: center;
-    transition: all .3s linear;
+    transition: var(--transition);
 }
 
-.navbar li a:hover {
+.navbar li a:hover,
+.dropdown:hover {
     background-color: var(--mist);
     color: var(--granite);
+}
+
+.dropdown ul li a:hover {
+    background-color: var(--granite);
+    color: var(--mist);
+}
+
+.notification-badge {
+    background-color: red;
+    border-radius: 20px;
+    width: 27px;
+    height: 20px;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 70px;
+}
+
+.notification-number {
+    position: absolute;
+    display: table;
+    margin-left: 8.5px;
+    color: white;
+    text-align: center;
 }
 
 .wrapper {
@@ -106,6 +157,7 @@ ul {
 .under-nav {
     background: linear-gradient(to right,rgba(55,99,172,.1) 0,rgba(248,176,72,.1) 100%);
     padding-bottom: 20px;
+    border-bottom: 1px solid var(--granite);
 }
 
 .under-nav .wrapper {
@@ -134,11 +186,21 @@ select {
     width: 280px;
 }
 
-input[type=text]::focus {
-    box-shadow: 0 0 5px 5px var(--cobalt);
+input[type=text]:focus,
+select:focus {
+    outline: none;
+    border: 1px solid transparent;
+    box-shadow: 0 0 1px 2px var(--sky);
 }
 
 h1 {
+    font-family: GT Walsheim;
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--granite);
+}
+
+h2 {
     font-family: GT Walsheim;
     font-weight: 800;
     font-size: 14px;
@@ -154,7 +216,7 @@ button {
     font-weight: 700;
     border: 1px solid var(--cobalt);
     border-radius: 20px;
-    transition: all .3s linear;
+    transition: var(--transition);
     text-decoration: none;
     cursor: pointer;
     align-items: baseline;
@@ -188,7 +250,7 @@ ul.search-links {
     padding-left: 7px;
     padding-right: 7px;
     text-decoration-skip: ink;
-    transition: all .3s linear;
+    transition: var(--transition);
 }
 
 .search-links li a:hover {
@@ -200,17 +262,12 @@ ul.search-links {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
-    justify-content: space-between;;
+    justify-content: space-between;
 }
 
 #practice-assessments {
     margin-bottom: 50px;
 }
-
-/*.flex-container > .panel {
-    flex-grow: 1;
-    flex: 1 1 30%;
-}*/
 
 .panel {
     box-shadow: 0 0 1px 1px rgba(179, 179, 179, 0.2);
@@ -220,6 +277,11 @@ ul.search-links {
     border-bottom: 5px solid var(--mist);
     border-radius: 5px;
     background-color: white;
+    transition: var(--transition);
+}
+
+.panel:hover {
+    box-shadow: 0 0 20px 5px rgba(179, 179, 179, 0.4);
 }
 
 .panel-heading {
@@ -237,11 +299,11 @@ ul.search-links {
     display: block;
 }
 
-.panel-footer h1 {
+.panel-footer h2 {
     float: right;
 }
 
-.panel-footer h1 a {
+.panel-footer h2 a {
     text-decoration: none;
 }
 
@@ -266,13 +328,13 @@ span {
     font-style: italic;
 }
 
-h1 a {
+h2 a {
     color: var(--granite);
     text-decoration-skip: ink;
-    transition: all .3s linear;
+    transition: var(--transition);
 }
 
-h1 a:hover {
+h2 a:hover {
     color: var(--cobalt);
 }
 
@@ -312,3 +374,29 @@ h1 a:hover {
 .panel-item:hover {
     background-color: var(--mist);
 }
+
+.whole-panel-link {
+    text-decoration: none;
+}
+
+.info-page-text-container {
+    display: block;
+    margin-top: 50px;
+    width: 65%;
+}
+
+.info-page-text-container ul {
+    list-style-type: disc;
+    line-height: 22px;
+}
+
+.info-page-text-container ul li {
+    font-family: GT Walsheim;
+    color: var(--granite);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+ .info-page-button {
+     padding: 5px 10px;
+ }

@@ -20,41 +20,63 @@
     </div>
     <div class="navbar">
         <ul>
-            <li><a href="#">CareerHub <i class="fas fa-caret-down"></i></a></li>
+            <li class="dropdown"><a href="#">CareerHub <i class="fas fa-caret-down fa-fw"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="index.html">CareerHub <i class="fas fa-home fa-fw"></i></a></li>
+                </ul>
+            </li>
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Opportunities</a></li>
             <li><a href="#">Events</a></li>
             <li><a href="#">Appointments</a></li>
-            <li><a href="#">Resources</a></li>
+            <li class="dropdown"><a href="#">Resources <i class="fas fa-caret-down fa-fw"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Interview/Assessment Centre Feedback</a></li>
+                    <li><a href="#">CV Help</a></li>
+                    <li><a href="#">Pupillage</a></li>
+                    <li><a href="#">International Students</a></li>
+                </ul>
+            </li>
             <li><a href="#">Ask a question</a></li>
             <li><a href="#">Forms</a></li>
             <li><a href="https://community.bpp.com/" target="_blank">BPP Community</a></li>
-            <li style="float: right"><a href="#"><i class="fas fa-user" style="padding-right: 8px"></i>Iain <i class="fas fa-caret-down"></i></a></li>
+            <li><div class="notification-badge" style="float-right"><span class="notification-number">3</span></div></li>
+            <li style="float: right" class="dropdown"><a href="#"><i class="fas fa-user fa-fw" style="padding-right: 8px"></i>Iain <i class="fas fa-caret-down fa-fw"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Preferences</a></li>
+                    <li><a href="#">Communication Settings</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 
     <div class="under-nav">
         <div class="wrapper">
             <div class="flex-item">
-                <h1>Search Opportunities</h1>
+                <h2>Search Opportunities</h2>
                 <input type="text" placeholder="e.g. Graduate, Analyst, Intern..." id="search-opps">
             </div>
                 <div class="flex-item">
-                    <h1>Type of Work</h1>
+                    <h2>Type of Work</h2>
                     <select name="worktype">
-                    <option value="any">Any</option>
-                    <option value="immediate">Immediate Start/General Opportunity</option>
-                    <option value="graduate">Graduate Schemes</option>
-                    <option value="vacation">Vacation Schemes</option>
-                    <option value="training">Training Contract</option>
-                    <option value="volunteer">Volunteer</option>
-                    <option value="workexperience">Work Experience/Placement</option>
-                    <option value="internship">Internship</option>
-                    <option value="pupillage">Pupillage</option>
-                </select>
+                        <option value="any">Any</option>
+                        <option value="immediate">Immediate Start/General Opportunity</option>
+                        <option value="graduate">Graduate Schemes</option>
+                        <option value="vacation">Vacation Schemes</option>
+                        <option value="training">Training Contract</option>
+                        <option value="volunteer">Volunteer</option>
+                        <option value="workexperience">Work Experience/Placement</option>
+                        <option value="internship">Internship</option>
+                        <option value="pupillage">Pupillage</option>
+                    </select>
                 </div>
                 <div class="flex-item">
-                    <h1>Location</h1>
+                    <h2>Location</h2>
                     <input type="text" placeholder="e.g. London, Greater London, United Kingdom" id="search-location">
             </div>
                     <div class="flex-item">
@@ -70,49 +92,52 @@
                         <li><a href="#">Vacation Schemes</a></li>
                         <li><a href="#">Training Contract</a></li>
                         <li><a href="#">Volunteer</a></li>
-                        <li><a href="#"><i class="fas fa-caret-down"></i>More Search Options</a></li>
+                        <li><a href="#"><i class="fas fa-caret-down fa-fw"></i> More Search Options</a></li>
                     </ul>
                 </div>
 
             </div>
 
             <div class="wrapper" id="main-content">
-                <h1>Practice Assessments</h1>
+                <h1>Graduates First</h1>
 
                 <div class="flex-container" id="practice-assessments">
 
-                    <div class="panel" style="border-top-color: #789CCA">
+                    <a href="graduates-first.html" class="whole-panel-link"><div class="panel" style="border-top-color: #789CCA">
                         <div class="panel-heading">
-                            <h1>Graduates First</h1>
+                            <h2>Graduates First</h2>
                         </div>
-                        <div href="#" class="panel-content">
-                            <img src="./images/graduates-first.png">
+                        <div class="panel-content">
+                            <img src="../images/graduates-first.png">
                             <p>
-                                Graduates First offer a variety of psychometric tests and other job assessment preparation solutions for students including detailed  step-by-step guides to over 100 top graduate employer's recruitment stages and hints on how to pass their assessment process.
+                                Graduates First offer a variety of psychometric tests and other job assessment preparation solutions for students including detailed step-by-step guides to over 100 top graduate employer's recruitment stages and hints
+                                on how to pass their assessment process.
                             </p>
-                        </div>
+                        </div></a>
                     </div>
 
                     <div class="panel" style="border-top-color: #EF8F8D">
                         <div class="panel-heading">
-                            <h1>Shortlist.Me</h1>
+                            <h2>Shortlist.Me</h2>
                         </div>
-                        <div href="#" class="panel-content">
-                            <img src="./images/shortlistme-logo.png">
+                        <div class="panel-content">
+                            <img src="../images/shortlistme-logo.png">
                             <p>
-                                Shortlist.Me is an interview preparation platform which helps Careers Services transform the way that they facilitate mock interviews. Careers Services are able to support students to reach their full potential through practical application, putting them ahead of the competition in real interviews and increasing employability.
+                                Shortlist.Me is an interview preparation platform which helps Careers Services transform the way that they facilitate mock interviews. Careers Services are able to support students to reach their full potential through
+                                practical application, putting them ahead of the competition in real interviews and increasing employability.
                             </p>
                         </div>
                     </div>
 
                     <div class="panel" style="border-top-color: #FACA8F">
                         <div class="panel-heading">
-                            <h1>Reel Ability</h1>
+                            <h2>Reel Ability</h2>
                         </div>
                         <div class="panel-content">
-                            <img src="./images/reelability.png">
+                            <img src="../images/reelability.png">
                             <p>
-                                There’s only so much a traditional CV can communicate. Reel Ability enables you to upload a video alongside this and expand on your bullet points, so you can Reely stand out from the rest. Helping your next employer see the person behind the paper.
+                                There’s only so much a traditional CV can communicate. Reel Ability enables you to upload a video alongside this and expand on your bullet points, so you can Reely stand out from the rest. Helping your next employer
+                                see the person behind the paper.
                             </p>
                         </div>
                     </div>
@@ -122,7 +147,7 @@
 
                     <div class="panel" style="border-top-color: #F7A08E">
                         <div class="panel-heading">
-                            <h1>Forthcoming events</h1>
+                            <h2>Forthcoming events</h2>
                         </div>
                         <div class="panel-content-items">
                             <a href="#" class="panel-item">
@@ -133,7 +158,7 @@
                                     26 September 2019
                                 </span>
                             </a>
-                            <a  href="#" class="panel-item">
+                            <a href="#" class="panel-item">
                                 <span class="panel-item-title">
                                     Commercial Awareness Wor...
                                 </span>
@@ -159,30 +184,30 @@
                             </a>
                         </div>
                         <div class="panel-footer">
-                            <h1><a href="#">Find more events ➜</a></h1>
+                            <h2><a href="#">Find more events ➜</a></h2>
                         </div>
                     </div>
 
-                    <div href="#" class="panel" style="border-top-color: #9E82B5">
+                    <div class="panel" style="border-top-color: #9E82B5">
                         <div class="panel-heading">
-                            <h1>Appointments</h1>
+                            <h2>Appointments</h2>
                         </div>
                         <div class="panel-content">
-                        <p>
-                            Our consultants offer guidance and advice, at any stage of your career preparation.
-                        </p>
-                        <p style="padding-bottom: 30px">
-                            <i><b>33</b> appointments still available.</i>
-                        </p>
-                    </div>
-                    <div class="panel-footer">
-                        <h1><a href="#">Book an appointment ➜</a></h1>
-                    </div>
+                            <p>
+                                Our consultants offer guidance and advice, at any stage of your career preparation.
+                            </p>
+                            <p style="padding-bottom: 30px">
+                                <i><b>33</b> appointments still available.</i>
+                            </p>
+                        </div>
+                        <div class="panel-footer">
+                            <h2><a href="#">Book an appointment ➜</a></h2>
+                        </div>
                     </div>
 
                     <div class="panel" style="border-top-color: #EB96BB">
                         <div class="panel-heading">
-                            <h1>Resources</h1>
+                            <h2>Resources</h2>
                         </div>
                         <div class="panel-content-items">
                             <a href="#" class="panel-item">
@@ -205,15 +230,15 @@
                                     Cover letters
                                 </span>
                             </a>
-                            </div>
+                        </div>
                         <div class="panel-footer">
-                            <h1><a href="#">More resources ➜</a></h1>
+                            <h2><a href="#">More resources ➜</a></h2>
                         </div>
                     </div>
 
                     <div class="panel" style="border-top-color: #94D2CE">
                         <div class="panel-heading">
-                            <h1>New on CareerHub</h1>
+                            <h2>New on CareerHub</h2>
                         </div>
                         <div class="panel-content-items">
                             <a href="#" class="panel-item">
@@ -261,7 +286,7 @@
 
                     <div class="panel" style="border-top-color: #ACD9E5">
                         <div class="panel-heading">
-                            <h1>News</h1>
+                            <h2>News</h2>
                         </div>
                         <div class="panel-content-items">
                             <a href="#" class="panel-item">
@@ -293,10 +318,10 @@
 
                     <div class="panel" style="border-top-color: #D3EAF0">
                         <div class="panel-heading">
-                            <h1>Featured Event</h1>
+                            <h2>Featured Event</h2>
                         </div>
                         <div class="panel-content">
-                            <h1><a href="#">Differences in Law Firms and Specialising in Tech/Start-ups - Buckworths</a></h1>
+                            <h2><a href="#">Differences in Law Firms and Specialising in Tech/Start-ups - Buckworths</a></h2>
                             <p>
                                 Buckworths “Corporate Law Firm of the year” MD Mike Buckworth, will explain the different types of law firms from high street to magic circle and how to specialise in an area of law that interests you.
                             </p>
@@ -306,7 +331,8 @@
                 </div>
             </div>
 
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+            <script type="text/javascript" src="scripts.js"></script>
 </body>
 
 </html>

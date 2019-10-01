@@ -1,6 +1,6 @@
 @font-face {
     font-family: "GT Walsheim";
-    src: url("./fonts/GT-Walsheim-Regular.otf") format("opentype");
+    src: url("/fonts/GT-Walsheim-Regular.otf") format("opentype");
     font-weight: 400;
 }
 
@@ -143,7 +143,8 @@ ul {
 .notification-number {
     position: absolute;
     display: table;
-    margin-left: 8.5px;
+    margin-left: 10px;
+    margin-top: -1px;
     color: white;
     text-align: center;
 }
@@ -191,6 +192,16 @@ select:focus {
     outline: none;
     border: 1px solid transparent;
     box-shadow: 0 0 1px 2px var(--sky);
+}
+
+#search {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    width: 0;
+    left: 265px;
+    top: -22px;
+    color: var(--granite);
 }
 
 h1 {
@@ -253,7 +264,14 @@ ul.search-links {
     transition: var(--transition);
 }
 
-.search-links li a:hover {
+.content-link {
+    color: var(--granite);
+    text-decoration-skip: ink;
+    transition: var(--transition);
+}
+
+.search-links li a:hover,
+.content-link:hover {
     color: var(--cobalt);
 }
 
@@ -263,6 +281,15 @@ ul.search-links {
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: space-between;
+}
+
+.grid-content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: start;
 }
 
 #practice-assessments {
@@ -280,7 +307,21 @@ ul.search-links {
     transition: var(--transition);
 }
 
-.panel:hover {
+.grid-panel {
+    box-shadow: 0 0 1px 1px rgba(179, 179, 179, 0.2);
+    margin-bottom: 20px;
+    border-top: 5px solid;
+    border-bottom: 5px solid var(--mist);
+    border-radius: 5px;
+    background-color: white;
+    transition: var(--transition);
+    grid-column: span 1;
+    grid-auto-rows: minmax(min-content, max-content);
+    margin-left: 15px;
+}
+
+.panel:hover,
+.grid-panel:hover {
     box-shadow: 0 0 20px 5px rgba(179, 179, 179, 0.4);
 }
 
@@ -307,7 +348,7 @@ ul.search-links {
     text-decoration: none;
 }
 
-.panel-content > img {
+.panel-content img {
     margin: 10px auto 20px auto;
     display: block;
     max-height: 50px;
@@ -382,7 +423,11 @@ h2 a:hover {
 .info-page-text-container {
     display: block;
     margin-top: 50px;
-    width: 65%;
+    grid-column: span 3;
+    grid-row: 1 / 3;
+    grid-auto-rows: minmax(min-content, max-content);
+    padding-right: 15px;
+    padding-bottom: 100px;
 }
 
 .info-page-text-container ul {
@@ -400,3 +445,61 @@ h2 a:hover {
  .info-page-button {
      padding: 5px 10px;
  }
+
+.jobs-table {
+    grid-column: span 3;
+    grid-row: 1 / 3;
+    margin-left: 0;
+    margin-right: 15px;
+    margin-bottom: 70px;
+}
+
+.job-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: start;
+    border-bottom: 1px solid var(--granite-light-level1);
+    padding: 15px 0;
+}
+
+.job-row:last-child {
+    border-bottom: none;
+}
+
+.job-row:first-child {
+    padding-top: 0;
+}
+
+.job-info {
+    grid-column: span 3;
+}
+
+.job-location-details {
+    grid-column: span 1;
+    text-align: right;
+    position: relative;
+    margin-top: 0.83em;
+}
+
+.job-location-details i.fas.fa-map-marker-alt,
+.job-location-details p {
+    display: inline-block;
+    color: var(--granite);
+    margin: 0;
+}
+
+.job-location-details button {
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    display: block;
+    padding: 5px;
+}
+
+.org-name {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    margin-top: -10px;
+}

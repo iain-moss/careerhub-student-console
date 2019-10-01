@@ -9,3 +9,10 @@ $(document).ready(function() {
         };
     })
 });
+
+$(document).ready(function() {
+    $("#apply-button").click(function() {
+        $("#apply-button").hide();
+        $("div.application-procedures").slideToggle();
+    });
+});

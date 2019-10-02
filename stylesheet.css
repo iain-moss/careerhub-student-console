@@ -233,6 +233,30 @@ button {
     display: inline-flex;
 }
 
+button.warning {
+    background-color: var(--orange);
+    color: white;
+    padding: 7px 10px;
+    font-family: GT Walsheim;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid white;
+    border-radius: 20px;
+    border: none;
+    cursor: default;
+    align-items: baseline;
+    display: inline-flex;
+    margin-right: 15px;
+}
+
+button.warning:hover {
+    background-color: var(--orange);
+    color: white;
+    font-family: GT Walsheim;
+    font-size: 14px;
+    font-weight: 700;
+}
+
 button:hover {
     background-color: var(--cobalt);
     color: white;
@@ -450,7 +474,8 @@ h2 a:hover {
     font-weight: 400;
 }
 
- .info-page-button {
+ .info-page-button,
+ .warning {
      padding: 5px 10px;
  }
 
@@ -514,4 +539,12 @@ h2 a:hover {
 
 .application-procedures {
     display: none;
+}
+
+.question-topic {
+    background-color: var(--sky);
+    padding: 4px 6px;
+    border-radius: 10px;
+    display: inline;
+    margin-left: 15px;
 }

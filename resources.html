@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="stylesheet" href="stylesheet.css">
-    <link rel="shortcut icon" href="../images/careerhub.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/careerhub.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/853c57480c.js" crossorigin="anonymous"></script>
 </head>
 
@@ -33,7 +33,7 @@
             <li class="dropdown"><a href="#">Resources <i class="fas fa-caret-down fa-fw"></i></a>
                 <ul class="sub-menu">
                     <li><a href="#">Interview/Assessment Centre Feedback</a></li>
-                    <li><a href="#">CV Help</a></li>
+                    <li><a href="#">Diversity in Practice</a></li>
                     <li><a href="#">Pupillage</a></li>
                     <li><a href="#">International Students</a></li>
                     <li><a href="resources.html">All resources</a></li>
@@ -43,7 +43,7 @@
             <li><a href="forms.html">Forms</a></li>
             <li><a href="https://community.bpp.com/" target="_blank">BPP Community</a></li>
             <li>
-                <div class="notification-badge" style="float-right"><span class="notification-number">3</span></div>
+                <div class="notification-badge" style="float: right"><span class="notification-number">3</span></div>
             </li>
             <li style="float: right" class="dropdown"><a href="#"><i class="fas fa-user fa-fw" style="padding-right: 8px"></i>Iain <i class="fas fa-caret-down fa-fw"></i></a>
                 <ul class="sub-menu" style="right: 0">
@@ -323,20 +323,26 @@
                         </div>
                     </div>
 
-                    <div class="page-numbers" style="grid-column: 1 / span 3; grid-row: 3; padding-bottom: 50px">
-                        <ul class="pagination" style="width: 100%">
-                            <li class="page-number active"><span>1</span></li>
-                            <li class="page-number"><a href="#"><span>2</span></a></li>
-                            <li class="page-number"><a href="#"><span>3</span></a></li>
-                            <li class="page-number"><a href="#"><span>4</span></a></li>
-                            <li class="page-number"><a href="#"><span>5</span></a></li>
-                            <li class="page-number"><a href="#"><span>6</span></a></li>
-                            <li class="page-number"><a href="#"><span>7</span></a></li>
-                            <li class="page-number"><a href="#"><span>8</span></a></li>
-                            <li class="page-number"><a href="#"><span>9</span></a></li>
-                            <li class="page-number"><a href="#"><span>10</span></a></li>
-                            <li><a href="#"><span>»</span></a></li>
-                        </ul>
+                    <div class="pagination">
+                            <button class="page-number active">1</button>
+                            <button class="page-number">2</li>
+                            <button class="page-number">3</button>
+                            <button class="page-number">4</button>
+                            <button class="page-number">5</button>
+                            <button class="page-number">6</button>
+                            <button class="page-number">7</button>
+                            <button class="page-number">8</button>
+                            <button class="page-number">9</button>
+                            <button class="page-number">10</button>
+                            <button class="page-number"><i class="fas fa-angle-right"></i></button>
+                            <button id="resources-button" style="padding: 5px 10px">Show 10<i class="fas fa-caret-down fa-fw"></i></button>
+                            <ul class="sub-menu" id="resources-show">
+                                <li><a href="#">Show 20</a></li>
+                                <li><a href="#">Show 30</a></li>
+                                <li><a href="#">Show 50</a></li>
+                                <li><a href="#">Show 100</a></li>
+                                <li><a href="#">Show All (637)</a></li>
+                            </ul>
                     </div>
 
                 </div>

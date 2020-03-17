@@ -200,6 +200,7 @@ select {
     font-weight: 300;
     padding: 5px 5px 5px 8px;
     width: 280px;
+    transition: all ease-in-out 0.2s;
 }
 
 input[type=text]:focus,
@@ -390,6 +391,10 @@ ul.search-links {
 .panel-heading {
     padding: 10px 15px;
     border-bottom: 1px solid rgba(179, 179, 179, 0.2);
+}
+
+.panel-heading a {
+    text-decoration: none;
 }
 
 .panel-content {
@@ -610,4 +615,23 @@ h2 a:hover {
     overflow: hidden;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        width: 100vw;
+    }
+
+    .under-nav,
+    .navbar {
+        display: none;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .panel {
+        width: 100%;
+    }
 }

@@ -28,3 +28,12 @@ $(document).ready(function() {
         $("div.application-procedures").slideToggle();
     });
 });
+
+const panels = document.querySelectorAll(".panel");
+const colours=["#789CCA", "#EF8F8D", "#FACA8F", "#F7A08E", "#9E82B5", "#EB96BB", "#94D2CE", "#ACD9E5", "#D3EAF0"];
+
+panels.forEach((panel, i) => panel.style.borderTopColor = colours[i]);
+
+// for (i = 0; i < panels.length; i++) {
+//     panels[i].style.borderTopColor = colours[i];
+// };
